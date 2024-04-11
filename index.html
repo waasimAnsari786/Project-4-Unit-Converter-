@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Currency Converter</title>
+        <title>Unit Converter</title>
     
         <!-- my css link -->
         <link rel="stylesheet" href="style.css">
@@ -48,24 +48,37 @@
     </head>
 <body>
 
-    <div class="unit-converter">
-        <p>unit converter</p>
-        <div class="uc-sec">
-            <select name="" id="">
+    <div class="unit-converter col-7 d-flex justify-content-center align-items-center flex-column gap-5">
+        <p class="heading">unit converter</p>
+        <div class="d-flex justify-content-center align-items-center gap-5">
+        <div class="uc-sec d-flex justify-content-center align-items-center flex-column gap-3">
+            <select class="select p-2" id="select">
                 <option value="">Feet</option>
-            </select>
-
-            <input type="number">
-        </div>
-        <div class="uc-sec">
-            <select name="" id="">
                 <option value="">Inch</option>
+                <option value="">Meter</option>
+                <option value="">Kilometer</option>
+                <option value="">Centimeter</option>
             </select>
 
-            <input type="number">
+            <input type="number" class="p-2">
         </div>
 
-        <p id="final-msg"></p>
+        <i class="fa-solid fa-equals equal-icon"></i>
+
+        <div class="uc-sec d-flex justify-content-center align-items-center flex-column gap-3">
+            <select name="" class="select p-2" id="select-2">
+                <option value="">Feet</option>
+                <option value="">Inch</option>
+                <option value="">Meter</option>
+                <option value="">Kilometer</option>
+                <option value="">Centimeter</option>
+            </select>
+
+            <input type="number" class="p-2">
+        </div>
+    </div>
+
+        <p id="final-msg" class="mb-5">final msg</p>
     </div>
     
     <script src="app.js"></script>

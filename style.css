@@ -37,10 +37,36 @@ html{
 
 /* my unit convertor start */
 .unit-converter{
-    background-color: azure;
+    background-color: rgb(102, 235, 235);
+    margin: auto;
+    margin-top: 10rem;
+    border-radius: 1.5rem;
 }
 
+.select{
+    font-size: 1.5rem;
+}
 
+.heading{
+    font-size: 5rem;
+    text-transform: capitalize;
+}
+
+.equal-icon{
+    font-size: 2rem;
+}
+
+#final-msg{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+select , input{
+    outline: none;
+    border: .1rem solid black;
+    border-radius: .5rem;
+    font-size: 1.5rem !important;
+}
 /* my unit convertor end */
 
 
