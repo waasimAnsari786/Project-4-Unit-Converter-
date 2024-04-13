@@ -47,6 +47,11 @@ html{
     font-size: 1.5rem;
 } */
 
+.sec-heading{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
 .heading{
     font-size: 5rem;
     text-transform: capitalize;

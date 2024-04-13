@@ -55,32 +55,38 @@
         <p class="heading">unit converter</p>
         <div class="d-flex justify-content-center align-items-center gap-5">
             <div class="uc-sec d-flex justify-content-center align-items-center flex-column gap-3">
-                <select class="select p-2" id="select">
+                <p class="sec-heading">from</p>
+                <select name="from" class="select p-2" id="from">
                     <option value="Feet">Feet</option>
                     <option value="Inch">Inch</option>
                     <option value="Meter">Meter</option>
                     <option value="Kilometer">Kilometer</option>
                     <option value="Centimeter">Centimeter</option>
                 </select>
-
-                <input type="number" class="p-2">
             </div>
 
             <i class="fa-solid fa-equals equal-icon"></i>
 
             <div class="uc-sec d-flex justify-content-center align-items-center flex-column gap-3">
-                <select name="" class="select p-2" id="select-2">
+                <p class="sec-heading">to</p>
+                <select name="to" class="select p-2" id="to">
                     <option value="Feet">Feet</option>
                     <option value="Inch">Inch</option>
                     <option value="Meter">Meter</option>
                     <option value="Kilometer">Kilometer</option>
                     <option value="Centimeter">Centimeter</option>
                 </select>
-
-                <input type="number" class="p-2">
             </div>
         </div>
-
+       
+        <div class="col-12">
+            <form action="" class="d-flex justify-content-around">
+                <input type="number" class="p-2" id="user-val" placeholder="Enter Your Value">
+                <input type="number" class="p-2" id="result" placeholder="Result">
+                <input type="submit" value="Get Value" id="btn">
+            </form>
+        </div>
+        
         <p id="final-msg" class="mb-5">final msg</p>
     </div>
 
