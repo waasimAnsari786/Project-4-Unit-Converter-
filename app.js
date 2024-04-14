@@ -11,6 +11,36 @@ const removeDecimals = (resultVal) => {
     return resultVal;
 };
 
+const kilometreIntoCentimetre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value * 100000;
+    });
+};
+
+const kilometreIntoKilometre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value;
+    });
+};
+
+const kilometreIntoMetre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value * 1000;
+    });
+};
+
+const kilometreIntoInch = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value * 39370;
+    });
+};
+
+const kilometreIntoFeet = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value * 3281;
+    });
+};
+
 const metreIntoCentimetre = (fromSelVal , toSelVal) => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 100;
@@ -167,6 +197,26 @@ selects.forEach(select => {
 
         else if (fromSelect.value === `Metre` && toSelect.value === `Centimetre`) {
             metreIntoCentimetre(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Kilometre` && toSelect.value === `Feet`) {
+            kilometreIntoFeet(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Kilometre` && toSelect.value === `Inch`) {
+            kilometreIntoInch(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Kilometre` && toSelect.value === `Metre`) {
+            kilometreIntoMetre(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Kilometre` && toSelect.value === `Kilometre`) {
+            kilometreIntoKilometre(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Kilometre` && toSelect.value === `Centimetre`) {
+            kilometreIntoCentimetre(fromSelect.value , toSelect.value);
         }
     });
 
