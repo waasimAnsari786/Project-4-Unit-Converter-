@@ -11,6 +11,36 @@ const removeDecimals = (resultVal) => {
     return resultVal;
 };
 
+const metreIntoCentimetre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value * 100;
+    });
+};
+
+const metreIntoKilometre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value / 1000;
+    });
+};
+
+const metreIntoMetre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value;
+    });
+};
+
+const metreIntoInch = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value * 39.37;
+    });
+};
+
+const metreIntoFeet = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value * 3.281;
+    });
+};
+
 const inchIntoCentimetre = (fromSelVal , toSelVal) => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 2.54;
@@ -117,6 +147,26 @@ selects.forEach(select => {
 
         else if (fromSelect.value === `Inch` && toSelect.value === `Centimetre`) {
             inchIntoCentimetre(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Metre` && toSelect.value === `Feet`) {
+            metreIntoFeet(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Metre` && toSelect.value === `Inch`) {
+            metreIntoInch(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Metre` && toSelect.value === `Metre`) {
+            metreIntoMetre(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Metre` && toSelect.value === `Kilometre`) {
+            metreIntoKilometre(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Metre` && toSelect.value === `Centimetre`) {
+            metreIntoCentimetre(fromSelect.value , toSelect.value);
         }
     });
 
