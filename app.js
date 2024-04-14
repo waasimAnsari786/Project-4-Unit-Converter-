@@ -11,153 +11,253 @@ const removeDecimals = (resultVal) => {
     return resultVal;
 };
 
-const centimetreIntoCentimetre = (fromSelVal , toSelVal) => {
+const centimetreIntoCentimetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value;
+    });
 };
 
-const centimetreIntoKilometre = (fromSelVal , toSelVal) => {
+const centimetreIntoKilometre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 100000;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value * 100000;
+    });
 };
 
-const centimetreIntoMetre = (fromSelVal , toSelVal) => {
+const centimetreIntoMetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 100;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value * 100;
+    });
 };
 
-const centimetreIntoInch = (fromSelVal , toSelVal) => {
+const centimetreIntoInch = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 2.54;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value * 2.54;
+    });
 };
 
-const centimetreIntoFeet = (fromSelVal , toSelVal) => {
+const centimetreIntoFeet = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 30.48;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value * 30.48;
+    });
 };
 
-const kilometreIntoCentimetre = (fromSelVal , toSelVal) => {
+const kilometreIntoCentimetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 100000;
     });
-};
 
-const kilometreIntoKilometre = (fromSelVal , toSelVal) => {
-    userVal.addEventListener("input" , () => {
-        result.value = userVal.value;
+    result.addEventListener("input" , () => {
+        userVal.value = result.value / 100000;
     });
 };
 
-const kilometreIntoMetre = (fromSelVal , toSelVal) => {
+const kilometreIntoKilometre = () => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value;
+    });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value;
+    });
+};
+
+const kilometreIntoMetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 1000;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value / 1000;
+    });
 };
 
-const kilometreIntoInch = (fromSelVal , toSelVal) => {
+const kilometreIntoInch = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 39370;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value / 39370;
+    });
 };
 
-const kilometreIntoFeet = (fromSelVal , toSelVal) => {
+const kilometreIntoFeet = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 3281;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value / 3281;
+    });
 };
 
-const metreIntoCentimetre = (fromSelVal , toSelVal) => {
+const metreIntoCentimetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 100;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value / 100;
+    });
 };
 
-const metreIntoKilometre = (fromSelVal , toSelVal) => {
+const metreIntoKilometre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 1000;
     });
-};
 
-const metreIntoMetre = (fromSelVal , toSelVal) => {
-    userVal.addEventListener("input" , () => {
-        result.value = userVal.value;
+    result.addEventListener("input" , () => {
+        userVal.value = result.value * 1000;
     });
 };
 
-const metreIntoInch = (fromSelVal , toSelVal) => {
+const metreIntoMetre = () => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value;
+    });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value;
+    });
+};
+
+const metreIntoInch = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 39.37;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value / 39.37;
+    });
 };
 
-const metreIntoFeet = (fromSelVal , toSelVal) => {
+const metreIntoFeet = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 3.281;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value / 3.281;
+    });
 };
 
-const inchIntoCentimetre = (fromSelVal , toSelVal) => {
+const inchIntoCentimetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 2.54;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value / 2.54;
+    });
 };
 
-const inchIntoKilometre = (fromSelVal , toSelVal) => {
+const inchIntoKilometre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 39370;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value * 39370;
+    });
 };
 
-const inchIntoMetre = (fromSelVal , toSelVal) => {
+const inchIntoMetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 39.37;
     });
-};
 
-const inchIntoInch = (fromSelVal , toSelVal) => {
-    userVal.addEventListener("input" , () => {
-        result.value = userVal.value;
+    result.addEventListener("input" , () => {
+        userVal.value = result.value * 39.37;
     });
 };
 
-const inchIntoFeet = (fromSelVal , toSelVal) => {
+const inchIntoInch = () => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value;
+    });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value;
+    });
+};
+
+const inchIntoFeet = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 12;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value * 12;
+    });
 };
 
-const feetIntoCentimetre = (fromSelVal , toSelVal) => {
+const feetIntoCentimetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 30.48;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value / 30.48;
+    });
 };
 
-const feetIntoKilometre = (fromSelVal , toSelVal) => {
+const feetIntoKilometre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 3281;
     });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value * 3281;
+    });
 };
 
-const feetIntoMetre = (fromSelVal , toSelVal) => {
+const feetIntoMetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 3.281;
     });
-};
 
-const feetIntoFeet = (fromSelVal , toSelVal) => {
-    userVal.addEventListener("input" , () => {
-        result.value = userVal.value;
+    result.addEventListener("input" , () => {
+        userVal.value = result.value * 3.281;
     });
 };
 
-const feetIntoInch = (fromSelVal , toSelVal) => {
+const feetIntoFeet = () => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value;
+    });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value;
+    });
+};
+
+const feetIntoInch = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 12;
+    });
+
+    result.addEventListener("input" , () => {
+        userVal.value = result.value / 12;
     });
 };
 
