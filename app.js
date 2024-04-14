@@ -2,13 +2,6 @@ let userVal = document.querySelector("#user-val");
 let result = document.querySelector("#result");
 
 // my all functions
-const removeDecimals = (resultVal) => {
-    resultVal = +resultVal;
-    if (!Number.isNaN(resultVal) && !Number.isInteger(resultVal)) {
-        return resultVal.toFixed(2); 
-    }
-    return resultVal;
-};
 
 const centimetreIntoCentimetre = () => {
     userVal.addEventListener("input" , () => {
