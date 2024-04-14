@@ -1,18 +1,26 @@
+// these variables are for accessing both inputs
 let userVal = document.querySelector("#user-val");
 let result = document.querySelector("#result");
 
-// my all functions
+//there are my all functions of all units and they all created almost with the same pattern but the conditions are change in each function.
 
+// there are all the functions of convert centimeter into all the units which placed in the select tag
+
+// this function is for converting centimetre into centimetre
 const centimetreIntoCentimetre = () => {
+
+    // this event listener applied on 1st input
     userVal.addEventListener("input" , () => {
         result.value = userVal.value;
     });
 
+    // this event listener applied on 2nd input
     result.addEventListener("input" , () => {
         userVal.value = result.value;
     });
 };
 
+// this function is for converting centimetre into kilometre
 const centimetreIntoKilometre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 100000;
@@ -23,6 +31,7 @@ const centimetreIntoKilometre = () => {
     });
 };
 
+// this function is for converting centimetre into metre
 const centimetreIntoMetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 100;
@@ -33,6 +42,7 @@ const centimetreIntoMetre = () => {
     });
 };
 
+// this function is for converting centimetre into inch
 const centimetreIntoInch = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 2.54;
@@ -43,6 +53,7 @@ const centimetreIntoInch = () => {
     });
 };
 
+// this function is for converting centimetre into feet
 const centimetreIntoFeet = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 30.48;
@@ -52,7 +63,13 @@ const centimetreIntoFeet = () => {
         userVal.value = result.value * 30.48;
     });
 };
+// centimetre into all other units's functions are ended
 
+
+
+// these functions are for converting kilometre into other units of select tags
+
+// this function is for converting kilometre into centimetre
 const kilometreIntoCentimetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 100000;
@@ -63,6 +80,7 @@ const kilometreIntoCentimetre = () => {
     });
 };
 
+// this function is for converting kilometre into kilometre
 const kilometreIntoKilometre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value;
@@ -73,6 +91,7 @@ const kilometreIntoKilometre = () => {
     });
 };
 
+// this function is for converting kilometre into metre
 const kilometreIntoMetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 1000;
@@ -83,6 +102,7 @@ const kilometreIntoMetre = () => {
     });
 };
 
+// this function is for converting kilometre into inch
 const kilometreIntoInch = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 39370;
@@ -93,6 +113,7 @@ const kilometreIntoInch = () => {
     });
 };
 
+// this function is for converting kilometre into feet
 const kilometreIntoFeet = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 3281;
@@ -102,7 +123,12 @@ const kilometreIntoFeet = () => {
         userVal.value = result.value / 3281;
     });
 };
+// kilometre into other units's functions are ended
 
+
+// these functions are for converting metre into other units of select tags
+
+// this function is for converting metre into centimetre
 const metreIntoCentimetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 100;
@@ -113,6 +139,7 @@ const metreIntoCentimetre = () => {
     });
 };
 
+// this function is for converting metre into kilometre
 const metreIntoKilometre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 1000;
@@ -123,6 +150,7 @@ const metreIntoKilometre = () => {
     });
 };
 
+// this function is for converting metre into metre
 const metreIntoMetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value;
@@ -133,6 +161,7 @@ const metreIntoMetre = () => {
     });
 };
 
+// this function is for converting metre into inch
 const metreIntoInch = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 39.37;
@@ -143,6 +172,7 @@ const metreIntoInch = () => {
     });
 };
 
+// this function is for converting metre into feet
 const metreIntoFeet = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 3.281;
@@ -152,7 +182,12 @@ const metreIntoFeet = () => {
         userVal.value = result.value / 3.281;
     });
 };
+// metre into other units's functions are ended
 
+
+// these functions are for converting inch into other units of select tags
+
+// this function is for converting inch into centimetre
 const inchIntoCentimetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 2.54;
@@ -163,6 +198,7 @@ const inchIntoCentimetre = () => {
     });
 };
 
+// this function is for converting inch into kilometre
 const inchIntoKilometre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 39370;
@@ -173,6 +209,7 @@ const inchIntoKilometre = () => {
     });
 };
 
+// this function is for converting inch into metre
 const inchIntoMetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 39.37;
@@ -183,6 +220,7 @@ const inchIntoMetre = () => {
     });
 };
 
+// this function is for converting inch into inch
 const inchIntoInch = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value;
@@ -193,6 +231,7 @@ const inchIntoInch = () => {
     });
 };
 
+// this function is for converting inch into feet
 const inchIntoFeet = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 12;
@@ -202,7 +241,12 @@ const inchIntoFeet = () => {
         userVal.value = result.value * 12;
     });
 };
+// inch into other units's functions are completed
 
+
+// these functions are for converting the feet into other units of select tags
+
+// this function is for converting feet into centimetre
 const feetIntoCentimetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 30.48;
@@ -213,6 +257,7 @@ const feetIntoCentimetre = () => {
     });
 };
 
+// this function is for converting feet into kilometre
 const feetIntoKilometre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 3281;
@@ -223,6 +268,7 @@ const feetIntoKilometre = () => {
     });
 };
 
+// this function is for converting feet into metre
 const feetIntoMetre = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 3.281;
@@ -233,6 +279,7 @@ const feetIntoMetre = () => {
     });
 };
 
+// this function is for converting feet into feet
 const feetIntoFeet = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value;
@@ -243,6 +290,7 @@ const feetIntoFeet = () => {
     });
 };
 
+// this function is for converting feet into inch
 const feetIntoInch = () => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 12;
@@ -252,10 +300,16 @@ const feetIntoInch = () => {
         userVal.value = result.value / 12;
     });
 };
+// feet into other units functions are ended
+// my all function are ended
 
+// this variable is for accessing the selects tags
 let selects = document.querySelectorAll(".select");
 
+// this loop is on each select tag for adding the functionality on them
 selects.forEach(select => {
+
+    // this code is for creating an hover effect
     select.addEventListener("mouseover" , function () {
         this.style.background = `#1a1919`;
         this.style.border = `.1rem solid #4b4b4b`;
@@ -264,15 +318,17 @@ selects.forEach(select => {
     select.addEventListener("mouseout" , function () {
         this.style.background = `#4b4b4b`;
     });
+    // hover effect ended
 
+    // this event listner is for applying the functions when user selects any unit for convert it into other
     select.addEventListener("change" , () => {
         let fromSelect = document.querySelector("#from");
         let toSelect = document.querySelector("#to");
 
+        // these all conditions are for each and every unit of this project. if they will be true then according to them a function will be run
         if (fromSelect.value === `Feet` && toSelect.value === `Inch`) {
             feetIntoInch(fromSelect.value , toSelect.value);
         }
-
 
         else if (fromSelect.value === `Feet` && toSelect.value === `Feet`) {
             feetIntoFeet(fromSelect.value , toSelect.value);
@@ -369,8 +425,12 @@ selects.forEach(select => {
         else if (fromSelect.value === `Centimetre` && toSelect.value === `Centimetre`) {
             centimetreIntoCentimetre(fromSelect.value , toSelect.value);
         }
+        // my all conditions are ended
     });
+    // event listener on is also ended
 
+
+    // this aprt of code is for declearing feet and inch as selected
     let selectName = select.name;
     let options = select.querySelectorAll("option");
 
@@ -381,8 +441,13 @@ selects.forEach(select => {
             option.selected = true;
         }
     });
+    // the code of declearing selected is ended
 });
+// the loop is also ended
 
+
+
+// this code is for running feet into inch function when window will be load beacuse the both units are selected in above function
 window.addEventListener("load" , () => {
         let fromSelect = document.querySelector("#from");
         let toSelect = document.querySelector("#to");
