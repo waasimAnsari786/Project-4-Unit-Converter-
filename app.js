@@ -11,25 +11,49 @@ const removeDecimals = (resultVal) => {
     return resultVal;
 };
 
+const inchIntoCentimetre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value * 2.54;
+    });
+};
+
+const inchIntoKilometre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value / 39370;
+    });
+};
+
+const inchIntoMetre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value / 39.37;
+    });
+};
+
+const inchIntoInch = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value;
+    });
+};
+
 const inchIntoFeet = (fromSelVal , toSelVal) => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 12;
     });
 };
 
-const feetIntoCentimeter = (fromSelVal , toSelVal) => {
+const feetIntoCentimetre = (fromSelVal , toSelVal) => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 30.48;
     });
 };
 
-const feetIntoKilometer = (fromSelVal , toSelVal) => {
+const feetIntoKilometre = (fromSelVal , toSelVal) => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 3281;
     });
 };
 
-const feetIntoMeter = (fromSelVal , toSelVal) => {
+const feetIntoMetre = (fromSelVal , toSelVal) => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value / 3.281;
     });
@@ -63,20 +87,36 @@ selects.forEach(select => {
             feetIntoFeet(fromSelect.value , toSelect.value);
         }
 
-        else if (fromSelect.value === `Feet` && toSelect.value === `Meter`) {
-            feetIntoMeter(fromSelect.value , toSelect.value);
+        else if (fromSelect.value === `Feet` && toSelect.value === `Metre`) {
+            feetIntoMetre(fromSelect.value , toSelect.value);
         }
 
-        else if (fromSelect.value === `Feet` && toSelect.value === `Kilometer`) {
-            feetIntoKilometer(fromSelect.value , toSelect.value);
+        else if (fromSelect.value === `Feet` && toSelect.value === `Kilometre`) {
+            feetIntoKilometre(fromSelect.value , toSelect.value);
         }
 
-        else if (fromSelect.value === `Feet` && toSelect.value === `Centimeter`) {
-            feetIntoCentimeter(fromSelect.value , toSelect.value);
+        else if (fromSelect.value === `Feet` && toSelect.value === `Centimetre`) {
+            feetIntoCentimetre(fromSelect.value , toSelect.value);
         }
 
         else if (fromSelect.value === `Inch` && toSelect.value === `Feet`) {
             inchIntoFeet(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Inch` && toSelect.value === `Inch`) {
+            inchIntoInch(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Inch` && toSelect.value === `Metre`) {
+            inchIntoMetre(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Inch` && toSelect.value === `Kilometre`) {
+            inchIntoKilometre(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Inch` && toSelect.value === `Centimetre`) {
+            inchIntoCentimetre(fromSelect.value , toSelect.value);
         }
     });
 
