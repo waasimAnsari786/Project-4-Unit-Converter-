@@ -164,6 +164,15 @@ const feetIntoInch = (fromSelVal , toSelVal) => {
 let selects = document.querySelectorAll(".select");
 
 selects.forEach(select => {
+    select.addEventListener("mouseover" , function () {
+        this.style.background = `#1a1919`;
+        this.style.border = `.1rem solid #4b4b4b`;
+    });
+
+    select.addEventListener("mouseout" , function () {
+        this.style.background = `#4b4b4b`;
+    });
+
     select.addEventListener("change" , () => {
         let fromSelect = document.querySelector("#from");
         let toSelect = document.querySelector("#to");

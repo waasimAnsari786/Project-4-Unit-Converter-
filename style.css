@@ -50,18 +50,18 @@ html body{
 
 .select{
     font-size: 1.3rem;
-    background-color: transparent;
-    border: .1rem solid #4b4b4b;
     color: #bdc1c6;
     outline: none;
+    background-color: #4b4b4b;
+    border: .1rem solid #4b4b4b;
 }
 
 .input{
     font-size: 2rem;
     padding: .5rem .5rem .5rem 1rem ;
-    background-color: #4b4b4b;
+    background-color: transparent;
+    border: .1rem solid #4b4b4b;
     outline: none;
-    border: none;
     color: white;
 }
 
