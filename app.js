@@ -11,6 +11,43 @@ const removeDecimals = (resultVal) => {
     return resultVal;
 };
 
+const centimetreIntoCentimetre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value;
+    });
+};
+
+const centimetreIntoKilometre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value / 100000;
+    });
+};
+
+const centimetreIntoMetre = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value / 100;
+    });
+};
+
+const centimetreIntoInch = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value / 2.54;
+    });
+};
+
+const centimetreIntoFeet = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value / 30.48;
+    });
+};
+
+
+
+
+
+
+
+
 const kilometreIntoCentimetre = (fromSelVal , toSelVal) => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 100000;
@@ -217,6 +254,26 @@ selects.forEach(select => {
 
         else if (fromSelect.value === `Kilometre` && toSelect.value === `Centimetre`) {
             kilometreIntoCentimetre(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Centimetre` && toSelect.value === `Feet`) {
+            centimetreIntoFeet(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Centimetre` && toSelect.value === `Inch`) {
+            centimetreIntoInch(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Centimetre` && toSelect.value === `Metre`) {
+            centimetreIntoMetre(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Centimetre` && toSelect.value === `Kilometre`) {
+            centimetreIntoKilometre(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Centimetre` && toSelect.value === `Centimetre`) {
+            centimetreIntoCentimetre(fromSelect.value , toSelect.value);
         }
     });
 
