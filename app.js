@@ -41,13 +41,6 @@ const centimetreIntoFeet = (fromSelVal , toSelVal) => {
     });
 };
 
-
-
-
-
-
-
-
 const kilometreIntoCentimetre = (fromSelVal , toSelVal) => {
     userVal.addEventListener("input" , () => {
         result.value = userVal.value * 100000;
