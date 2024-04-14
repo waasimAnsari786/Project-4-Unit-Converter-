@@ -36,40 +36,57 @@ html{
 
 
 /* my unit convertor start */
-.unit-converter{
-    background-color: rgb(102, 235, 235);
-    margin: auto;
-    margin-top: 10rem;
-    border-radius: 1.5rem;
+html body{
+    background-color: #202124;
+    font-family: arial, sans-serif;
+    color: rgb(189, 193, 198);
 }
 
-/* .select{
-    font-size: 1.5rem;
-} */
+.unit-converter{
+    border: .1rem solid #4b4b4b;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+.select{
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: .1rem solid #4b4b4b;
+    color: #bdc1c6;
+    outline: none;
+}
+
+.input{
+    font-size: 2rem;
+    padding: .5rem .5rem .5rem 1rem ;
+    background-color: #4b4b4b;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+input::placeholder{
+    color: white;
+}
 
 .sec-heading{
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-transform: capitalize;
 }
 
 .heading{
-    font-size: 5rem;
+    font-size: 4rem;
     text-transform: capitalize;
 }
 
 .equal-icon{
     font-size: 2rem;
+    margin-top: 7.5rem;
 }
 
 #final-msg{
     font-size: 2rem;
     text-transform: capitalize;
-}
-
-select , input{
-    outline: none;
-    border: .1rem solid black;
-    border-radius: .5rem;
 }
 /* my unit convertor end */
 
@@ -78,5 +95,5 @@ select , input{
 
 
 .rough{
-    border: .1rem solid black;
+    border: .1rem solid rgb(189, 193, 198);
 }
