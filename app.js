@@ -1,56 +1,83 @@
 let userVal = document.querySelector("#user-val");
 let result = document.querySelector("#result");
-let fromSelect = document.querySelector("#from").innerText;
-let toselect = document.querySelector("#to").innerText;
-let btn = document.querySelector("#btn");
-
+let msg = document.querySelector("#final-msg");
 
 // my all functions
-const printInch = () => {
-    result.value = userVal.value * 12;
+const removeDecimals = (resultVal) => {
+    resultVal = +resultVal;
+    if (!Number.isNaN(resultVal) && !Number.isInteger(resultVal)) {
+        return resultVal.toFixed(2); 
+    }
+    return resultVal;
 };
 
+const inchIntoFeet = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value / 12;
+    });
+};
 
-// const printFeet = () => {
-//     console.log(`feet`);
-// };
-// const printMeter = () => {
-//     console.log(`meter`);
-// };
-// const printKilometer = () => {
-//     console.log(`kilometer`);
-// };
-// const printCentimeter = () => {
-//     console.log(`centimeter`);
-// };
+const feetIntoCentimeter = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value * 30.48;
+    });
+};
 
-const targetElement = (elemet) => {
-    if (elemet.value === `Inch`) {
-        printInch();
-    }
+const feetIntoKilometer = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value / 3281;
+    });
+};
 
-    // else if (elemet.value === `Feet`) {
-    //     printFeet();
-    // }
+const feetIntoMeter = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value / 3.281;
+    });
+};
 
-    // else if (elemet.value === `Meter`) {
-    //     printMeter();
-    // }
+const feetIntoFeet = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value;
+    });
+};
 
-    // else if (elemet.value === `Kilometer`) {
-    //     printKilometer();
-    // }
-
-    // else if (elemet.value === `Centimeter`) {
-    //     printCentimeter();
-    // }
+const feetIntoInch = (fromSelVal , toSelVal) => {
+    userVal.addEventListener("input" , () => {
+        result.value = userVal.value * 12;
+    });
 };
 
 let selects = document.querySelectorAll(".select");
 
 selects.forEach(select => {
-    select.addEventListener("change", (evt) => {
-        targetElement(evt.target);
+    select.addEventListener("change" , () => {
+        let fromSelect = document.querySelector("#from");
+        let toSelect = document.querySelector("#to");
+
+        if (fromSelect.value === `Feet` && toSelect.value === `Inch`) {
+            feetIntoInch(fromSelect.value , toSelect.value);
+        }
+
+
+        else if (fromSelect.value === `Feet` && toSelect.value === `Feet`) {
+            feetIntoFeet(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Feet` && toSelect.value === `Meter`) {
+            feetIntoMeter(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Feet` && toSelect.value === `Kilometer`) {
+            feetIntoKilometer(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Feet` && toSelect.value === `Centimeter`) {
+            feetIntoCentimeter(fromSelect.value , toSelect.value);
+        }
+
+        else if (fromSelect.value === `Inch` && toSelect.value === `Feet`) {
+            inchIntoFeet(fromSelect.value , toSelect.value);
+        }
     });
 
     let selectName = select.name;
@@ -65,7 +92,11 @@ selects.forEach(select => {
     });
 });
 
-btn.addEventListener("click" , (evt) => {
-    evt.preventDefault();
-    printInch();
+window.addEventListener("load" , () => {
+        let fromSelect = document.querySelector("#from");
+        let toSelect = document.querySelector("#to");
+
+        if (fromSelect.value === `Feet` && toSelect.value === `Inch`) {
+            feetIntoInch(fromSelect.value , toSelect.value);
+        }
 });
