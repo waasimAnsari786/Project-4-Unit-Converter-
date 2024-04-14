@@ -1,6 +1,5 @@
 let userVal = document.querySelector("#user-val");
 let result = document.querySelector("#result");
-let msg = document.querySelector("#final-msg");
 
 // my all functions
 const removeDecimals = (resultVal) => {
